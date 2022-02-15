@@ -1,0 +1,174 @@
+/* HAIR STYLE */
+.styles-section {
+  height: auto;
+  margin-top: 3rem;
+}
+.styles-section .style {
+  background-image: url(../../images/p16.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  z-index: 0;
+}
+
+.styles-section .style .style-item {
+  width: 90%;
+  color: #fff;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.9);
+  margin: 1rem 0;
+  border-radius: 5%;
+  padding: 3rem 1rem;
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.styles-section .style .style-item i {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: crimson;
+  z-index: 1000;
+}
+.styles-section .style .style-item h4 {
+  margin-bottom: 2rem;
+  color: #fff;
+}
+.styles-section .style .style-item p {
+  color: rgba(243, 233, 235, 0.5);
+}
+
+/* SLIDER */
+.gallery {
+  background: crimson;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 90%;
+  height: 200px;
+}
+.gallery::before,
+.gallery::after {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 100px;
+  height: 200px;
+  z-index: 2;
+}
+.gallery::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.gallery::before {
+  left: 0;
+  top: 0;
+}
+.slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+.slide-track .gall {
+  width: 200px;
+  height: 300px;
+}
+.slide-track .gall img {
+  height: 200px;
+  width: 250px;
+  object-fit: cover;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+.portfolioOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  border-radius: 5%;
+  transition: all 0.5s ease;
+}
+.styles-section .style .style-item:hover .portfolioOverlay {
+  height: 100%;
+}
+.overlay-btn {
+  background: transparent;
+  color: crimson;
+  border: 1px solid crimson;
+  padding: 1rem;
+  font-size: 17px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.overlay-btn:hover {
+  background: crimson;
+  color: #fff;
+}
+.gallery-page {
+  color: white;
+  background: crimson;
+  padding: 1rem 1.2rem;
+  margin-top: 1rem;
+  border: 1px solid crimson;
+  transition: all 0.5s ease;
+}
+.gallery-page:hover {
+  background: transparent;
+  color: crimson;
+}
+@media screen and (min-width: 800px) {
+  /* HAIR STYLE */
+  .styles-section {
+    height: auto;
+    margin-top: 3rem;
+  }
+  .styles-section .style {
+    flex-direction: row;
+  }
+
+  .styles-section .style .style-item {
+    width: 300px;
+    margin: 3rem 0;
+  }
+
+  /* SLIDER */
+  .gallery {
+    width: 80%;
+  }
+  .gallery::before,
+  .gallery::after {
+    width: 200px;
+  }
+
+  .slide-track .gall {
+    width: 200px;
+    height: 300px;
+  }
+}
+/* SLIDER END */

@@ -1,0 +1,83 @@
+.heroContainer {
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  border: 8px solid rgba(0, 0, 0, 0.1);
+}
+#pages {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 4rem;
+}
+#pages h1 {
+  color: white;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+#pages h1 span {
+  color: orange;
+}
+#pages p {
+  font-size: 0.9rem;
+  color: white;
+  margin-bottom: 1rem;
+  line-height: 30px;
+}
+#pages p span {
+  color: #15cdfc;
+  font-weight: 600;
+  font-size: 1.2rem;
+  background: white;
+  border-radius: 5px;
+  padding: 0.3rem;
+}
+#pages a {
+  color: white;
+  background: crimson;
+  border: 1px solid crimson;
+  border-radius: 10px;
+  padding: 12px 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: 0.3s;
+  animation: example 0.5 linear infinite;
+}
+#pages a:hover {
+  background: rgba(220, 20, 60, 0.8);
+}
+.image {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
+
+@keyframes example {
+  from {
+    background: pink;
+  }
+  to {
+    background: yellow;
+  }
+}
+@media screen and (min-width: 800px) {
+  #pages h1 {
+    font-size: 3rem;
+  }
+
+  #pages p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  #pages p span {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,351 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-2: hsl(205, 77%, 27%);
+  --clr-primary-3: hsl(205, 72%, 37%);
+  --clr-primary-4: hsl(205, 63%, 48%);
+  /* primary/main color */
+  --clr-primary-5: #49a6e9;
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(205, 89%, 70%);
+  --clr-primary-7: hsl(205, 90%, 76%);
+  --clr-primary-8: hsl(205, 86%, 81%);
+  --clr-primary-9: hsl(205, 90%, 88%);
+  --clr-primary-10: hsl(205, 100%, 96%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-secondary: hsl(205, 77%, 27%);
+  --clr-color: rgb(252, 194, 6);
+  --clr-black: #222;
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+/* ======
+ scrollbar End
+ ========= */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #24178a;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2b17be;
+}
+
+/* ======
+ scrollbar End
+ ========= */
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+.btn {
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--clr-black);
+  padding: 0.375rem 0.75rem;
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  transition: var(--transition);
+  font-size: 0.875rem;
+  border: 2px solid var(--clr-black);
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
+}
+
+.btn:hover {
+  color: var(--clr-white);
+  background: var(--clr-black);
+}
+.btn-white {
+  color: var(--clr-white);
+  border-color: var(--clr-white);
+  border-radius: 0;
+  padding: 0.5rem 1rem;
+}
+.btn:hover {
+  color: var(--clr-white);
+  background: var(--clr-secondary);
+}
+/* hero */
+.home {
+  min-height: 90vh;
+  background: linear-gradient(rgba(63, 208, 212, 0.2), rgba(0, 0, 0, 0.2)),
+    url("../../images/p6.jpg") center/cover no-repeat;
+}
+.homeBanner {
+  min-height: 90vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+.homeContainer .social-media {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-around;
+}
+.homeContainer .social-media a {
+  color: black;
+  background: var(--clr-color);
+  border: 1px solid var(--clr-color);
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  position: relative;
+  transition: var(--transition);
+}
+.homeContainer .social-media a i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.homeContainer .social-media a:hover {
+  background: transparent;
+  color: var(--clr-white);
+}
+.homeBanner .homeContainer h1 {
+  font-size: 1.6rem;
+  color: var(--clr-white);
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  animation: fade 12s linear infinite;
+}
+.homeBanner .homeContainer h1 small {
+  font-size: 0.9rem;
+}
+@keyframes fade {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.homeContainer p {
+  color: var(--clr-white);
+  max-width: 25rem;
+  margin: 0 auto;
+  margin-bottom: 1.25rem;
+}
+.homeContainer p span,
+.homeContainer h1 span {
+  color: var(--clr-color);
+  margin: 0.5rem;
+}
+
+.homeHero-section .homeTitle h2 {
+  position: relative;
+  height: auto;
+  width: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 5% 0 2% 0;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: var(--clr-secondary);
+  border-left: 5px solid var(--clr-secondary);
+  border-right: 5px solid var(--clr-secondary);
+  background: rgba(0, 0, 0, 0.05);
+}
+.homeHero {
+  min-height: 90vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  margin-top: 5rem 0;
+}
+.homeTitle span {
+  color: var(--clr-secondary);
+}
+.homeHero .homeHeroItem {
+  border-top: 4px solid var(--clr-primary-2);
+  padding-bottom: 2rem;
+}
+.homeHero .homeHeroItem img {
+  width: 220px;
+  margin: 2rem 0;
+}
+.homeHero .homeHeroItem h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 3rem;
+  position: relative;
+}
+.homeHero .homeHeroItem h3::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  width: 15%;
+  left: 42%;
+  border-top: 3px solid var(--clr-primary-2);
+}
+
+.homeHero .homeHeroItem p {
+  line-height: 30px;
+  margin-bottom: 5rem;
+  text-align: left;
+  padding: 0 1rem;
+}
+.homeHero .homeHeroItem p span {
+  color: orangered;
+}
+.homeHero .homeHeroItem .link {
+  background: var(--clr-primary-2);
+  color: var(--clr-white);
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  transition: var(--transition);
+}
+.homeHero .homeHeroItem .link:hover {
+  background: var(--clr-color);
+  color: var(--clr-primary-2);
+}
+/* ===============
+     HOME HERO End
+=================== */
+.homeServices-section {
+  padding: 1.3rem;
+}
+.homeTitle h2 {
+  font-size: 2rem;
+  width: 60%;
+  text-align: center;
+}
+
+.homeServices .home-left h4 {
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 2rem;
+  margin: 1rem 0;
+}
+.homeServices h5 {
+  font-size: 16px;
+  margin: 0.7rem 0;
+  font-weight: 300;
+}
+.homeServices p {
+  font-size: 15px;
+  line-height: 30px;
+  text-align: left;
+}
+.homeServices p a {
+  font-size: 15px;
+  color: orangered;
+}
+
+.homeServices ul li {
+  list-style-type: none;
+  margin-left: 2.5rem;
+  margin-bottom: 0.6rem;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+.homeServices ul li a {
+  color: orangered;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.homeServices ul li:hover a {
+  color: var(--clr-secondary);
+}
+
+@media screen and (min-width: 800px) {
+  .homeHero {
+    display: flex;
+  }
+  .homeHero .homeHeroItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .homeHero .homeHeroItem:not(:last-child) {
+    margin-right: 1rem;
+  }
+  .homeHero .homeHeroItem img {
+    width: 180px;
+    margin: 1rem 0;
+  }
+  .homeHero .homeHeroItem h3 {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+  }
+  .homeHero .homeHeroItem h3::before {
+    top: 130%;
+    left: 40%;
+  }
+  .homeHero .homeHeroItem p {
+    padding: 1rem;
+    font-size: 16px;
+  }
+  .homeServices {
+    min-height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+    margin-left: 5rem;
+  }
+  .homeServices-section .homeTitle h2 {
+    font-size: 2.2rem;
+    width: 40%;
+    text-align: right;
+  }
+  .homeServices .home-left {
+    flex: 0 0 60%;
+    width: 60%;
+  }
+  .homeServices .home-right {
+    flex: 0 0 30%;
+    width: 30%;
+    margin-right: 3rem;
+  }
+  .homeServices p {
+    font-size: 16px;
+    line-height: 23px;
+  }
+}

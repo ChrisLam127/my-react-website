@@ -1,0 +1,191 @@
+.webDesignTitle h2,
+#pricing .title h2 {
+  position: relative;
+  height: auto;
+  width: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 5% 0 2% 0;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: #140b5c;
+  border-left: 5px solid var(--clr-secondary);
+  border-right: 5px solid var(--clr-secondary);
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.webDesign {
+  margin: 3rem 1rem;
+}
+.webDesign-left p {
+  line-height: 30px;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  padding: 0 1rem;
+}
+.webDesign-left h2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 3rem;
+  position: relative;
+}
+.webDesign-left p span {
+  color: orangered;
+}
+.webDesign-left p a {
+  color: orangered;
+  border: 1px solid orangered;
+  padding: 0.3rem 0.8rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+.webDesign-left p a:hover {
+  background: orangered;
+  color: #fff;
+}
+/* Pricing Section */
+
+#pricing {
+  min-height: 100vh;
+  max-width: 95vw;
+  margin: 0 auto;
+  z-index: -100;
+}
+#pricing .prices {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  margin-top: 5rem;
+}
+#pricing .prices .signup {
+  margin-bottom: 3rem;
+}
+#pricing .prices .signup h2 {
+  color: var(--clr-color);
+  margin-bottom: 2rem;
+}
+#pricing .prices .text p {
+  color: black;
+  max-width: 22rem;
+  margin: 0 auto;
+  margin-bottom: 1.25rem;
+}
+#pricing .prices .price {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#pricing .prices .package-deal {
+  margin-top: 5rem;
+  background: var(--clr-primary-2);
+  padding: 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+#pricing .prices .package-deal:hover {
+  background: var(--clr-color);
+}
+#pricing .prices .package-deal:hover a {
+  color: var(--clr-primary-2);
+}
+#pricing .prices .package-deal a {
+  color: var(--clr-white);
+  transition: var(--transition);
+}
+.price-item {
+  margin: 0 0 1rem 0;
+  min-width: 250px;
+  width: 250px;
+  border-radius: 30px;
+  transition: var(--transition);
+  box-shadow: 5px 5px 15px rgb(2, 2, 2);
+}
+.price-item:hover {
+  transform: scale(1.05);
+  background: rgba(223, 218, 218, 0.4);
+}
+.price-item .price-header {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 2rem 0.8rem;
+  border-radius: 30px;
+  color: var(--clr-white);
+  background: var(--clr-primary-2);
+}
+.price-item .price-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--clr-secondary);
+  padding: 1rem;
+}
+.price-item .description h5 {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+.price-item .description p {
+  color: var(--clr-black);
+  border-bottom: 1px dotted #999;
+  padding: 0.5rem 0;
+}
+.price-item a {
+  color: var(--clr-color);
+  background: var(--clr-primary-2);
+  padding: 0.5rem;
+  border-radius: 20px;
+  transition: var(--transition);
+}
+.price-item a:hover {
+  background: var(--clr-color);
+  color: var(--clr-primary-2);
+  font-size: 15px;
+}
+/* Pricing Section End*/
+@media screen and (min-width: 800px) {
+  .webDesign {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 3rem 1rem;
+  }
+  .webDesign-left {
+    flex: 0 0 70%;
+  }
+
+  .webDesign-left p {
+    line-height: 30px;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    padding: 0 1rem;
+  }
+  .webDesign-left h2 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+  .webDesign-left p span {
+    color: orangered;
+  }
+
+  .webDesign-right .submenu {
+    background: #24178a;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  #pricing .prices .text p {
+    max-width: 25rem;
+    line-height: 2;
+  }
+  .price-item {
+    margin: 0 2rem 2rem 2rem;
+    min-width: 320px;
+    width: 320px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 15px rgb(2, 2, 2);
+  }
+}

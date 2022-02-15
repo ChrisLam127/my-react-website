@@ -1,0 +1,115 @@
+#about {
+  margin: 3rem 1rem;
+}
+#about .title h2 {
+  position: relative;
+  height: auto;
+  width: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 5% 0 2% 0;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: var(--clr-secondary);
+  border-left: 5px solid var(--clr-secondary);
+  border-right: 5px solid var(--clr-secondary);
+  background: rgba(0, 0, 0, 0.05);
+}
+.div-left {
+  /* margin: 4rem; */
+  padding-top: 0.5rem;
+  margin-bottom: 2rem;
+  height: auto;
+  width: 100%;
+  box-shadow: 2px 2px 15px rgb(2, 2, 2);
+  border-radius: 20px;
+}
+.div-left .form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.div-left h2 {
+  text-align: center;
+  font-size: 18px;
+  color: rgb(181, 173, 173);
+  margin: 2rem 0;
+}
+.div-left .form .labels {
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+.div-left .form label {
+  margin-left: 8px;
+}
+.div-left .form .input {
+  margin: 8px;
+  /* margin-left: 50px; */
+  font-size: 14px;
+  padding: 12px;
+  border: 1px solid rgb(181, 173, 173);
+  border-left: 2px solid var(--clr-primary-2);
+  border-radius: 5px;
+  color: black;
+  width: 90%;
+}
+.div-left .map {
+  width: 100%;
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+}
+.div-left .map iframe {
+  width: 90%;
+  height: 350px;
+}
+.div-left .form .submit {
+  margin: 8px auto;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 10px;
+  border: 1px solid var(--clr-primary-2);
+  border-radius: 5px;
+  background: var(--clr-primary-2);
+  color: #fff;
+  width: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.div-left .form .submit:hover {
+  background: none;
+  color: var(--clr-secondary);
+}
+/* Form Section End */
+
+@media screen and (min-width: 800px) {
+  .about {
+    display: flex;
+    justify-content: space-around;
+  }
+  .div-left {
+    flex: 0 0 60%;
+    margin-right: 4rem;
+  }
+  .div-left .form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .div-left .form label {
+    margin-left: 8px;
+  }
+  .div-left .form .labels {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .div-left .form .labels .label:not(:last-child) {
+    margin-right: 3rem;
+  }
+}
